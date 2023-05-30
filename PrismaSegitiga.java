@@ -9,14 +9,15 @@ public class PrismaSegitiga extends BangunRuang {
         this.tinggiPrisma = tinggiPrisma;
     }
 
+    @Override
     public double hitungVolume() {
-        return (alas * tinggiAlas * tinggiPrisma) / 2;
+        return (1.0 / 2.0) * alas * tinggiAlas * tinggiPrisma;
     }
 
+    @Override
     public double hitungLuasPermukaan() {
-        double luasSegitiga = (alas * tinggiAlas) / 2;
-        double luasAlasPrisma = alas * tinggiPrisma;
-        double luasSisiPrisma = 3 * luasSegitiga;
-        return luasAlasPrisma + luasSisiPrisma;
+        double luasAlas = (1.0 / 2.0) * alas * tinggiAlas;
+        double luasSisi = 3 * alas * tinggiPrisma;
+        return luasAlas + luasSisi;
     }
 }

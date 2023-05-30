@@ -5,10 +5,12 @@ public class Kubus extends BangunRuang {
         this.sisi = sisi;
     }
 
+    @Override
     public double hitungVolume() {
         return Math.pow(sisi, 3);
     }
 
+    @Override
     public double hitungLuasPermukaan() {
         return 6 * Math.pow(sisi, 2);
     }

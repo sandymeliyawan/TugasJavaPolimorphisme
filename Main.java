@@ -1,38 +1,25 @@
 public class Main {
     public static void main(String[] args) {
-        // Membuat objek-objek bangun ruang
-        Kubus kubus = new Kubus(5);
-        Balok balok = new Balok(4, 6, 3);
-        Bola bola = new Bola(7);
-        Tabung tabung = new Tabung(4, 8);
-        PrismaSegitiga prismaSegitiga = new PrismaSegitiga(5, 6, 8);
-        // 
+        BangunRuang[] bangunRuangArray = new BangunRuang[5];
+        bangunRuangArray[0] = new Kubus(5);
+        bangunRuangArray[1] = new Balok(4, 6, 8);
+        bangunRuangArray[2] = new Bola(3);
+        bangunRuangArray[3] = new Tabung(2, 5);
+        bangunRuangArray[4] = new PrismaSegitiga(6, 4, 7);
         System.out.println("");
-        System.out.println("Nama          : Sandy Meliyawan");
-        System.out.println("NPM           : 2169700003");
-        System.out.println("Prodi         : Teknik Komputer Jaringan");
-        System.out.println("Dosen Pengampu: Anderias Eko Wijaya, S.T., M.Kom.");
-        System.out.println("");
-        // Menghitung volume dan luas permukaan dari masing-masing bangun ruang
-        System.out.println("====================Kubus====================");
-        System.out.println("Volume: " + kubus.hitungVolume());
-        System.out.println("Luas Permukaan: " + kubus.hitungLuasPermukaan());
-
-        System.out.println("\n====================Balok====================");
-        System.out.println("Volume: " + balok.hitungVolume());
-        System.out.println("Luas Permukaan: " + balok.hitungLuasPermukaan());
-
-        System.out.println("\n====================Bola====================");
-        System.out.println("Volume: " + bola.hitungVolume());
-        System.out.println("Luas Permukaan: " + bola.hitungLuasPermukaan());
-
-        System.out.println("\n====================Tabung====================");
-        System.out.println("Volume: " + tabung.hitungVolume());
-        System.out.println("Luas Permukaan: " + tabung.hitungLuasPermukaan());
-
-        System.out.println("\n================Prisma Segitiga================");
-        System.out.println("Volume: " + prismaSegitiga.hitungVolume());
-        System.out.println("Luas Permukaan: " + prismaSegitiga.hitungLuasPermukaan());
-        System.out.println("");
+        System.out.println("====================================");
+        System.out.println("----------Sandy Meliyawan-----------");
+        System.out.println("-------------2169700003-------------");
+        System.out.println("---------Pemrograman Java 1---------");
+        System.out.println("====================================");
+        for (BangunRuang bangunRuang : bangunRuangArray) {
+            double volume = bangunRuang.hitungVolume();
+            double luasPermukaan = bangunRuang.hitungLuasPermukaan();
+            System.out.println("");
+            System.out.println("Bangun Ruang : " + bangunRuang.getClass().getSimpleName());
+            System.out.println("Volume: " + volume);
+            System.out.println("Luas Permukaan: " + luasPermukaan);
+            System.out.println("-------------------");
+        }
     }
 }
